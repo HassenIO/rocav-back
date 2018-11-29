@@ -1,5 +1,3 @@
-import json
-
 def list_CompTerit():
     return [
 		'ABBEVILLE',

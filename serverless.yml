@@ -24,13 +24,13 @@ provider:
 
 functions:
   inputs:
-    handler: handler.inputs
+    handler: src/inputs.run
     events:
       - http:
           path: inputs
           method: get
   reco:
-    handler: handler.reco
+    handler: src/reco.run
     events:
       - http:
           path: reco
