@@ -29,10 +29,12 @@ functions:
       - http:
           path: inputs
           method: get
+          cors: true
   reco:
     handler: reco.run
     events:
       - http:
           path: reco
           method: post
+          cors: true
 
