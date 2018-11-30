@@ -1,6 +1,6 @@
 import pandas as pd
 
-def model1(compTerit,specialite,domaine):
+def model(compTerit,specialite,domaine):
     dataFinal = pd.read_csv("./dataFinal.csv", sep=",")
     ###### listes des compétences,spécialités et domaines possibles
     compTerritPossibles=[x for x in dataFinal.columns if ('CT_LWord_' in x)]
