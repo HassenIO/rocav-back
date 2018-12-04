@@ -35,6 +35,6 @@ functions:
     events:
       - http:
           path: reco
-          method: post
+          method: get
           cors: true
 

@@ -25,3 +25,4 @@ def model(compTerit,specialite,domaine):
             return dataPossibles[['AvocatId','nameAvocat','Critères',domaineColonne,'Partenaire', 'Côut']]
         else:
             return pd.DataFrame()
+
