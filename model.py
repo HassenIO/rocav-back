@@ -20,14 +20,14 @@ def model(compTerit,specialite,domaine):
                 dataPossibles['Taux_missions_Domaine_Accomplies']=0
             dataPossibles[domaineColonne]=dataPossibles[domaine].astype(int)
             criteres=dataPossibles['Taux de reussite']+dataPossibles['Taux Part reussite']-dataPossibles['Taux_Echec']+dataPossibles['Taux_missions_Accomplies']+dataPossibles['Taux_missions_Domaine_Accomplies']
+            returnedColums=['AvocatId','nameAvocat','Critères',domaineColonne,'Partenaire', 'Côut']
             if (max(criteres)!=min(criteres)):
                 dataPossibles['Critères']=(criteres-min(criteres))/float(max(criteres)-min(criteres))
                 dataSorted=dataPossibles.sort_values(by=['Critères'],ascending=False)
-                return dataSorted[['AvocatId','nameAvocat','Critères',domaineColonne,'Partenaire', 'Côut']]
+                return dataSorted[returnedColums]
             else:
                 dataPossibles['Critères']=1
-                return dataPossibles[['AvocatId','nameAvocat','Critères',domaineColonne,'Partenaire', 'Côut']]
-        else:
-            return pd.DataFrame()
+                return dataPossibles[returnedColums]
+    return pd.DataFrame()
 
 
